@@ -4,9 +4,7 @@ import {Request, Response} from "express";
 
 const port = process.env.PORT || 3000;
 
-connectDB().then(r => {
-    console.log("Database connected successfully");
-});
+connectDB();
 
 app.get('/', (req: Request, res: Response) => {
     res.send("Blood_link backend is running!");

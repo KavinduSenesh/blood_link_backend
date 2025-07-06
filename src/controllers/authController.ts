@@ -1,9 +1,10 @@
-import {Request, Response} from "express";
 import User from "../models/User";
 import { error } from "console";
-import {generateAccessToken} from "../utils/generateToken";
+import { generateAccessToken } from "../utils/generateToken";
 
-export const signUpUser = async (req: Request, res: Response)=> {
+export const signUpUser = async (req: any, res: any)=> {
+    console.log(req.body);
+
     const { name, email, password, role, bloodType, phone, area, isAvailable, createdAt } = req.body;
 
     try {

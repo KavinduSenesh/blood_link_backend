@@ -5,7 +5,7 @@ const UserScheme = new Schema<IUser>({
     name: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
-    role: { type: String, enum: ['admin', 'doner', 'recipient'], default: 'recipient' },
+    role: { type: String, enum: ['admin', 'donor', 'recipient'], default: 'recipient' },
     bloodType: { type: String },
     phone: { type: String, required: true },
     area: { type: String, required: true },
